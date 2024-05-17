@@ -1,0 +1,25 @@
+//-- Vista registro --//
+
+extends layout 
+
+block contenido 
+    h2 Registrarse
+    .container
+        .row.justify-content-center
+            .col-md-6
+                .card.mb-3
+                    .card-body
+                        form(action="/register" method="POST")
+                            .mb-3
+                                label(for="email" class="form-label") Email 
+                                input(type="email" name='Email' class='form-control' placeholder='Ingrese Email')
+                            .mb-3
+                                label(for="nombre" class="form-label") Nombre 
+                                input(type="text" name='Nombre' class='form-control' placeholder='Ingrese Nombre')
+                            .mb-3
+                                label(for="contraseña" class="form-label") Contraseña 
+                                input(type="password" name='Contraseña' class='form-control' placeholder='Ingrese Contraseña')
+                            .d-grid.gap-2
+                                button.btn.btn-primary(type="submit") Crear cuenta 
+                            .mt-3.text-center
+                                a(href="/login" class="btn btn-link") ¿Ya está registrado? Inicie sesión aquí!

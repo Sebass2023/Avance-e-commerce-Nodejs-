@@ -1,0 +1,41 @@
+extends layout 
+
+block contenido 
+    .container
+        .row.justify-content-center
+            .col-md-8
+                .card
+                    .card-body
+                        h2.card-title.text-center Mi dirección
+
+                        .Direcciones 
+                            if direcciones.length
+                                each Direccion in direcciones 
+                                    .card.mb-3
+                                        .card-body
+                                            .row.align-items-center
+                                                .col-md-2
+                                                    .IconoDir 
+                                                        i(class="fa fa-solid fa fa-house")
+                                                .col-md-10
+                                                    .texto 
+                                                        p.Calle= `${Direccion.Direccion}`
+                                                        .TextoDown 
+                                                            p= `Codigo postal ${Direccion.CodigoPostal} ${Direccion.Ciudad}`
+                                                            p= `${Direccion.Nombre} ${Direccion.Apellido} ${Direccion.Telefono}`
+                                        .card-footer.text-center
+                                            .BtnDireccionMenu.dropdown
+                                                button.btn.btn-outline-secondary.dropdown-toggle(type='button', id=`dropdownMenuButton${Direccion._id}`, aria-expanded="false")
+                                                    | Acciones
+                                                .dropdown-menu(aria-labelledby=`dropdownMenuButton${Direccion._id}`)
+                                                    a.dropdown-item(href=`/direcciones/editar/${Direccion._id}`) Editar
+                                                    a.dropdown-item(href="#" data-id=`${Direccion._id}`) Eliminar
+
+                                .card.mb-3
+                                    .card-body.text-center
+                                        a.btn.btn-success(href="/direcciones/agregar/") Agregar Direccion 
+
+                            else 
+                                .card-body.text-center
+                                    p.Direcciones No tiene direcciones en su cuenta 
+                                    a.btn.btn-success(href="/direcciones/agregar/") Agregar Direccion

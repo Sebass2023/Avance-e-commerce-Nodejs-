@@ -1,0 +1,19 @@
+extends layout 
+
+block contenido 
+    section.Contacto 
+        .container
+            .row.justify-content-center
+                .col-md-6
+                    h2 Restablecer Contraseña
+                    .card.mb-3
+                        .card-body
+                            
+                            form(action="/restablecer" method="POST")
+                                .mb-3
+                                    label(for="Email" class="form-label") Email 
+                                    input(type="email" name="Email" class="form-control" placeholder="Ingrese su email")
+                                .d-grid.gap-2
+                                    button.btn.btn-primary(type="submit") Restablecer
+                                .mt-3.text-center
+                                    a(href="/login" class="btn btn-link") Iniciar sesión

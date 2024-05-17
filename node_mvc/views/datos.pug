@@ -1,0 +1,19 @@
+extends layout 
+
+block contenido 
+    section.Cuenta 
+        h2 Mis Datos
+        .container
+            .row.justify-content-center
+                .col-lg-6
+                    .card
+                        .card-body   
+                            form.default-form(method="POST")
+                                .form-group
+                                    label(for="Nombre") Nombre:
+                                    input.form-control(type="text" name="Nombre" placeholder="Indique usuario" value=`${usuario.Nombre}` ) 
+                                .form-group
+                                    label(for="text") Email:
+                                    input.form-control(type="text" name="Email" placeholder="Indique Email" value=`${usuario.Email}`)
+                                
+                                button.btn.btn-primary(type='submit') Guardar

@@ -1,0 +1,22 @@
+//-- vista login --//
+extends layout 
+
+block contenido 
+    h2 Iniciar sesión
+    .container
+        .row.justify-content-center
+            .col-md-6
+                .card.mb-3
+                    .card-body
+                        form(action="/login" method="POST")
+                            .mb-3
+                                label(for="email" class="form-label") Email 
+                                input(type="email" name='Email' class='form-control' placeholder='Ingrese Email')
+                            .mb-3
+                                label(for="contraseña" class="form-label") Contraseña 
+                                input(type="password" name='Contraseña' class='form-control' placeholder='Ingrese Contraseña')
+                            .d-grid.gap-2
+                                button.btn.btn-primary(type="submit") Iniciar sesión 
+                            .mt-3.text-center
+                                a(href="/register" class="btn btn-link") ¿Aún no estás registrado? Crea una cuenta aquí!
+                                a(href="/restablecer" class="btn btn-link") ¿Olvidó su contraseña?

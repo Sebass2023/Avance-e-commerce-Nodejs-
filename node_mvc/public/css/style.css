@@ -1,0 +1,615 @@
+body{
+    margin: 0;
+    background-color: rgba(175, 180, 180, 0.685);
+}
+
+/* GLOBALES */  
+
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* Formulario por defecto */
+
+.formularioLogin{
+    margin-bottom: 5rem;
+}
+.FormDefault{
+    background-color: rgba(0, 0, 0, 0.685);;
+    padding: 2rem 0rem;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 1px 7px 31px 5px white;
+    border-radius: 2rem;
+}
+.Campo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0rem;
+    flex-direction: column;
+}
+.Campo input{
+    width: 80%;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.Campo label{
+    font-size: 2rem;
+    padding: 1rem;
+    color: white;
+}
+.Left{
+    justify-content: flex-end;
+}
+.Acciones a{
+font-size: 1.5rem;
+color: white;
+}
+
+@media only screen and (min-width:768px){
+    .FormDefault{
+        width: 50rem;
+    }
+    .Campo{
+        flex-direction: row;
+    }
+    .Campo input{
+        width: 33rem;
+        margin: 0rem 3rem;
+    }
+}
+.Button{
+    padding: 5rem 2rem;
+    border-radius: 5px;
+    position: relative;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0rem 1rem;
+    border: none;
+    cursor: pointer;
+    background: none;
+    font-family: 'Amatic Sc',cursive;
+}
+.Button span{
+    color: white;
+}
+
+/* estilar el header */
+.Index{
+    background-image: url(/img/692043.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 45rem;
+    background-position: 0px 0px;
+}
+
+.contenedorHeader{
+    display: flex;
+    flex-direction: column;
+    height: 45rem;
+    background-color: gray;
+}
+
+/* estilar barra */
+
+.Barra{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Index .BarraInicio{
+    background-color: rgba(81, 86, 87, 0.685);
+}
+
+.BarraInicio{
+    background-color: rgb(81, 86, 87);
+}
+
+.Barra h1{
+    color: white;
+    font-size: 3rem;
+    margin: 2rem 1rem;
+}
+
+.Nav{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.Nav .menuLink{
+    color: white;
+    font-size: 2rem;
+}
+.liMenu{
+    padding: 0.5rem;
+}
+.Submenu{
+    display: none;
+}
+
+.Titulo{
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 4rem auto;
+    width: 90%;
+    color: white;
+    line-height: 3rem;
+    z-index: 2;
+}
+
+@media only screen and (min-width:768px){
+    .contenedorHeader{
+        justify-content: space-between;
+    }
+    .Barra{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 1,5rem;
+    }
+    .Barra h1{
+        font-size: 4rem;
+    }
+
+    .Nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        transition: transform 1s;
+        margin-top: 1rem;
+        transform: translate(0);
+    }
+
+    .Nav a:hover{
+        color: black;
+        transition: color .5s;
+    }
+
+
+
+    .Submenu {
+        display: none;
+        position: absolute;
+        top: 2rem;
+        padding: 0.5rem 3px;
+    }
+
+    .Submenu a{
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    li:hover .Submenu {
+        opacity: 100;
+        display: block;
+        transition: opacity .5s;
+    }
+
+    .Titulo{
+        font-size: 5rem;
+        margin: 15rem 4rem;
+        width: 90%;
+        line-height: 4rem;
+
+    }
+}
+
+/* ABOUT */
+
+.SeccionAbout{
+    margin-top: 5rem;
+    position: relative;
+}
+
+.imagenesAbout{
+    margin-bottom: 9rem;
+
+}
+
+.imgAbout1{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.imgAbout2{
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    top: 8rem;
+    left: 25rem;
+
+}
+
+.About h2{
+    font-size: 3.5rem;
+    text-align: center;
+    color: white;
+}
+
+.About p{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: white;
+}
+
+@media only screen and (min-width:768px){
+    .contenedorAbout{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10rem;
+    }
+
+    .imagenesAbout:hover .imgAbout1{
+        border-radius: 5rem;
+        transform: scale(1.1);
+        transition: all 0.4s ease 0s;
+    }
+
+    .imagenesAbout:hover .imgAbout2{
+        border-radius: 1rem;
+        transform: scale(1.1);
+        transition: all 1s ease 0s;
+    }
+
+    .imgAbout1{
+        width: 35rem;
+        transition: all 1s;
+    }
+    .imgAbout2{
+        width: 20rem;
+        height: 20rem;
+        top: 7rem;
+        transition: 1s;
+    }
+}
+
+/* PRODUCTOS */
+.SeccionProductos h2{
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+
+}
+
+.contenedorElementos{
+    background-color: rgba(81, 86, 87, 0.685);
+    padding: 2rem;
+}
+.contenedorElementos h3{
+    font-size: 2.2rem;
+    text-align: center;
+    color: white;
+    border-bottom: 5px solid white;
+    border-radius: 1px;
+    padding-bottom: 1rem;
+}
+
+.contenedorElementos p{
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+    color: white;
+}
+
+.Productos{
+    margin: 2rem 0rem;
+    cursor: pointer;
+}
+
+@media only screen and (min-width:768px){
+    .contenedorElementos{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 3rem;
+
+    }
+    .Productos:hover{
+        transform: scale(1.1);
+        transition: all .5s;
+    }
+
+    .Productos{
+        transition: all 1s;
+    }
+}
+
+/* Galeria */
+
+
+.SeccionGaleria h2{
+    color: white;
+}
+.ContenedorImagenes{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+}
+
+@media only screen and (min-width:768px){
+    .ContenedorImagenes{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .ImgGal{
+        transition: all 1s;
+    }
+    .ImgGal:hover{
+        transform: scale(1.1);
+        transition: all 1s;
+    }
+}
+
+/* PARALLAX */
+
+.ContenedorPantalla{
+    position: relative;
+    height: auto;
+}
+.Parallax::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.ContenedorPantalla::before{
+    content: '';
+    background-image: url('/img/pngtree-an-old-gym-setting-with-dumbbells-image_2569910.jpg');
+    background-attachment: fixed;
+}
+.BackgroundPantalla{
+    background-color: rgba(0, 0, 0, 0.466);
+    z-index: 1;
+    position: relative;
+}
+.Texto{
+    position: relative;
+}
+.Texto h2{
+    font-size: 2rem;
+    line-height: 4rem;
+    text-align: center;
+    color: white;
+}
+
+@media only screen and (min-width:768px){
+    .Texto h2{
+        font-size: 6rem;
+        line-height: 10rem;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+/* Contacto e info */
+
+.SeccionInfo h2{
+    color: white;
+}
+.InformacionDiv{
+    background-color: #252323;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0rem;
+    border-radius: 1rem;
+}
+
+.Borde{
+    border: 1px solid white;
+    margin: .5rem;
+    border-radius: 1rem;
+    width: 22.7rem;
+}
+
+.InformacionDiv p{
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+@media only screen and (min-width:768px){
+    .ContenedorInfo{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+    .InformacionDiv{
+        margin: 1rem 0rem;
+    }
+}
+
+/* Tienda */
+
+.OjoProducto{
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: all 1s;
+    position: relative;
+    top: 11rem;
+}
+
+.OjoProducto i {
+    font-size: 2.5rem;
+    padding: 1rem;
+    color: black;
+    background: white;
+    border-radius: 50%;
+}
+
+.ImagenP:hover .OjoProducto{
+    opacity: 1;
+}
+
+.ImagenP{
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+.Productos .ContenidoProducto .ProductoNombre{
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.PrecioProducto span{
+    font-size: 2.2rem;
+}
+
+.PrecioProducto{
+    font-size: 2.5rem;
+}
+
+.ContenidoProducto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BtnProductos{
+    margin: 1.5rem 0rem;
+    color: #631a8b;
+}
+
+@media only screen and (min-width:768px){
+    .ImagenP:hover{
+        transform: scale(1.05);
+    }
+    .ImagenP::before{
+        content: '';
+        transition: all .5s;
+    }
+    .Productos .ImagenP:hover::before{
+        content: '';
+        width: 100%;
+        height: 98%;
+        border-radius: 2rem;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        box-shadow: 0 0 1rem 0 rgb(0 0 0 / 20%);
+        background-color: rgba(255, 255, 255, .15);
+        backdrop-filter: blur(5px);
+        transition: all .5s;
+    }
+}
+
+/* Efecto por producto */
+
+.ImagenCont .Imagen{
+    position: relative;
+    height: 22rem;
+    background: #b5b1b1;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+.SliderImg  {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.Imagen .show{
+    opacity: 1;
+}
+
+.CambiarFoto{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+.BtnCambiar{
+    width: 5rem;
+    height: .5rem;
+    background-color: rgb(110, 110, 110);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.InformacionTarta{
+    position: relative;
+}
+
+.InformacionTarta .PrecioNombre .NombreTarta{
+    color: rgb(31, 29, 29);
+    font-size: 3rem;
+    margin-top: 10px;
+    margin-bottom: -41px;
+    text-align: left;
+}
+
+.PrecioProducto{
+    color: rgb(27, 25, 25);
+    font-size: 3rem;
+    margin-top: 30px;
+}
+
+
+.PrecioProducto span {
+    font-size: 3.2rem;
+}
+.Cantidad {
+    margin-top: -30px;
+    display: flex;
+}
+.Cantidad label{
+    font-size: 2rem;
+}
+.AgregarCarrito {
+    text-align: center;
+}
+.inputCantidad {
+    margin: 0rem 1rem;
+}
+.BtnEditarProducto {
+    position: absolute;
+    left: 93%;
+    top: 0%;
+    font-size: 2rem;
+    color: black;
+}
+
+@media only screen and (min-width:768px) {
+
+    .ImagenCont .Imagen {
+        height: 32rem;
+        width: 32rem;
+        background: none;
+    }
+    .AgregarCarrito {
+        margin: 4rem;
+    }
+    .AgregarCarrito .Boton {
+        font-size: 3rem;
+    }
+}
+
+/* Efecto direcciones */

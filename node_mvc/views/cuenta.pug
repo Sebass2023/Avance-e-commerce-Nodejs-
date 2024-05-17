@@ -1,0 +1,26 @@
+extends layout
+
+block contenido
+    section.Cuenta
+        h2.text-center(style="color: #333;") Mi cuenta
+
+        .row.justify-content-center.mt-4
+            .col-md-6
+                .card.shadow-sm(style="background-color: #f8f9fa;")
+                    .card-body
+                        .OpcionCuenta
+                            a(href="/datos" class="text-decoration-none text-dark")
+                                .Opcion.mb-4(style="border-bottom: 1px solid #dee2e6; padding-bottom: 20px;")
+                                    .Icono
+                                        i.fa.fa-user(style="color: #007bff;")
+                                    .Texto
+                                        h5.TituloOpcion(style="color: #007bff;") Tus Datos
+                                        p.DescripcionOpcion Ingresa tus datos personales
+
+                            a(href="/direcciones" class="text-decoration-none text-dark")
+                                .Opcion(style="padding-top: 20px;")
+                                    .Icono
+                                        i.fa.fa-location-dot(style="color: #28a745;")
+                                    .Texto
+                                        h5.TituloOpcion(style="color: #28a745;") Tu dirección
+                                        p.DescripcionOpcion Ingresa tu dirección

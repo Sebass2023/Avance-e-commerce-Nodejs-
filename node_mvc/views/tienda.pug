@@ -1,0 +1,21 @@
+extends layout 
+
+block contenido 
+    main.Tienda 
+        h2 Algunos de nuestros productos 
+            .contenedor.contenedorElementos
+                if(Productos.length)
+                    each Producto in Productos
+                        .card.mb-3(style="max-width: 18rem;")
+                            .card-body
+                                .ImagenP
+                                    a.OjoProducto(href=`/tienda/${Producto.Imagen}`)
+                                        i(class="fa-solid fa-eye")
+                                    a(href=``)
+                                        img.ImgPro.card-img-top(src=`/img/${Producto.Imagen}` alt=`${Producto.Titulo}`)
+                                .ContenidoProducto 
+                                    h5.card-title= Producto.Titulo
+                                    h5.card-text $
+                                        span= Producto.Precio
+                                    button.btn.BtnProductos(name='BtnAccion' type='submit' value='Agregar' href='#')
+                                        

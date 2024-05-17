@@ -1,0 +1,9 @@
+li.liMenu 
+    a.menuLink(href='/tienda') Productos
+li.liMenu 
+    a.menuLink(href='/about') About
+li.liMenu 
+    a.menuLink(href='/logueado') mi cuenta
+    ul.Submenu(class=Pagina != 'Index' ? 'BarraCom' : '')
+        li 
+            a.menuLink.CerrarSesionMov(href="/cerrarSesion") Cerrar sesion

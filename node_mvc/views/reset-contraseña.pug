@@ -1,0 +1,13 @@
+extends layout 
+
+block contenido 
+    section.Contacto 
+        h2 Restablecer contraseña
+        .Registrar 
+            form(action=`/restablecer-password/${Token}` method="POST" class='FormDefault')
+                    div.Campo
+                        label(for="Contraseña") Nueva Contraseña: 
+                        input(type="password" name="Contraseña" placeholder="Ingrese su contraseña")
+                    .Campo.left 
+                        button.Button(name='BtnCrears' type='submit')
+                            span Restablecer

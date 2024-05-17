@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Conexion a MongoDB
-mongoose.connect('mongodb+srv://memsito2003:Pitochu.88@tienda.5q2evxb.mongodb.net/Tienda');
+mongoose.connect('mongodb+srv://');
 
 //verificar conexion
 mongoose.connection.on('connected', () => {

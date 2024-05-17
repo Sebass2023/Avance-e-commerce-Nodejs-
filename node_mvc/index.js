@@ -40,7 +40,7 @@ app.use(session({
     key:'contraseña',
     resave:false,
     saveUninitialized:false,
-    store:MongoStore.create({mongoUrl:'mongodb+srv://memsito2003:Pitochu.88@tienda.5q2evxb.mongodb.net/Tienda'})
+    store:MongoStore.create({mongoUrl:'mongodb+srv://'})
 }))
 
 //agregar passport
